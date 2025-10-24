@@ -2521,21 +2521,44 @@ body {
         display: flex;
     }
     
+    .hamburger span {
+        background: #ffffff;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+    }
+    
     .nav-menu {
         position: fixed;
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: white;
+        background: rgba(0, 0, 0, 0.95);
+        backdrop-filter: blur(15px);
         width: 100%;
         text-align: center;
         transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        box-shadow: 0 10px 27px rgba(0,0,0,0.3);
         padding: 2rem 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .nav-menu.active {
         left: 0;
+    }
+    
+    .nav-menu a {
+        color: #ffffff !important;
+        font-size: 1.1rem;
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .nav-menu a:hover {
+        color: #4ecdc4 !important;
+        background: rgba(255, 255, 255, 0.05);
+    }
+    
+    .nav-menu a::after {
+        display: none;
     }
     
     .hero {
@@ -2591,7 +2614,10 @@ body {
     }
     
     .navbar {
-        padding: 0rem 0;
+        padding: 0.5rem 0;
+        background: rgba(0, 0, 0, 0.9);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     
     .hero-buttons {
