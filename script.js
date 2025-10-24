@@ -114,50 +114,45 @@ if (contactForm) {
 }
 
 // Dealer form handling
-const dealerForm = document.querySelector('.dealer-application');
+const dealerForm = document.getElementById('dealerForm');
 if (dealerForm) {
     dealerForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         // Get form data
-        const name = this.querySelector('input[name="name"]').value;
-        const email = this.querySelector('input[name="email"]').value;
-        const phone = this.querySelector('input[name="phone"]').value;
-        const city = this.querySelector('input[name="city"]').value;
-        const state = this.querySelector('input[name="state"]').value;
-        const experience = this.querySelector('textarea[name="experience"]').value;
-        const investment = this.querySelector('textarea[name="investment"]').value;
+        const formData = new FormData(this);
+        const data = Object.fromEntries(formData);
         
-        // Simple validation
-        if (!name || !email || !phone || !city || !state) {
+        // Basic validation
+        if (!data.name || !data.email || !data.phone || !data.city || !data.state || !data.message) {
             alert('Please fill in all required fields.');
             return;
         }
         
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
+        if (!emailRegex.test(data.email)) {
             alert('Please enter a valid email address.');
             return;
         }
         
         // Phone validation
-        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-        if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
-            alert('Please enter a valid phone number.');
+        const phoneRegex = /^[0-9]{10}$/;
+        if (!phoneRegex.test(data.phone)) {
+            alert('Please enter a valid 10-digit phone number.');
             return;
         }
         
         // Simulate form submission
         const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Submitting Application...';
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span>Submitting...</span>';
         submitBtn.disabled = true;
         
         setTimeout(() => {
             alert('Thank you for your dealership application! Our team will review your application and contact you within 2-3 business days.');
             this.reset();
-            submitBtn.textContent = originalText;
+            submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
         }, 2000);
     });
