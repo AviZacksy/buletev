@@ -116,6 +116,56 @@ if (contactForm) {
     });
 }
 
+// Dealer form handling
+const dealerForm = document.querySelector('.dealer-application');
+if (dealerForm) {
+    dealerForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const name = this.querySelector('input[name="name"]').value;
+        const email = this.querySelector('input[name="email"]').value;
+        const phone = this.querySelector('input[name="phone"]').value;
+        const city = this.querySelector('input[name="city"]').value;
+        const state = this.querySelector('input[name="state"]').value;
+        const experience = this.querySelector('textarea[name="experience"]').value;
+        const investment = this.querySelector('textarea[name="investment"]').value;
+        
+        // Simple validation
+        if (!name || !email || !phone || !city || !state) {
+            alert('Please fill in all required fields.');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        
+        // Phone validation
+        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+        if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
+            alert('Please enter a valid phone number.');
+            return;
+        }
+        
+        // Simulate form submission
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Submitting Application...';
+        submitBtn.disabled = true;
+        
+        setTimeout(() => {
+            alert('Thank you for your dealership application! Our team will review your application and contact you within 2-3 business days.');
+            this.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        }, 2000);
+    });
+}
+
 // Gallery lightbox effect
 const galleryItems = document.querySelectorAll('.gallery-item img');
 galleryItems.forEach(img => {

@@ -587,6 +587,138 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
+/* Dealer Section */
+.dealer {
+    padding: 40px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.dealer h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: white;
+}
+
+.dealer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.dealer-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: white;
+}
+
+.dealer-info p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.dealer-benefits {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.benefit-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+}
+
+.benefit-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.benefit-item h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.benefit-item p {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+}
+
+.dealer-form {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 15px;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dealer-form h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: white;
+    text-align: center;
+}
+
+.dealer-application .form-group {
+    margin-bottom: 1rem;
+}
+
+.dealer-application input,
+.dealer-application textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    font-size: 1rem;
+    backdrop-filter: blur(10px);
+}
+
+.dealer-application input::placeholder,
+.dealer-application textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.dealer-application input:focus,
+.dealer-application textarea:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.dealer-application .btn {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    color: #667eea;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dealer-application .btn:hover {
+    background: #f8f9fa;
+    transform: translateY(-2px);
+}
+
 /* Contact Section */
 .contact {
     padding: 40px 0;
@@ -852,6 +984,24 @@ body {
     
     .stat p {
         font-size: 0.8rem;
+    }
+    
+    .dealer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .dealer-benefits {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .dealer h2 {
+        font-size: 2rem;
+    }
+    
+    .dealer-info h3 {
+        font-size: 1.5rem;
     }
     
     .contact-content {
