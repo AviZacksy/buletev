@@ -1616,10 +1616,42 @@ body {
 
 /* Dealer Page Styles */
 .dealer-hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 6rem 0 4rem;
+    overflow: hidden;
+}
+
+.dealer-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 1;
+}
+
+.dealer-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+    z-index: 2;
+}
+
+.dealer-hero-content {
+    position: relative;
+    z-index: 3;
     text-align: center;
+    color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .dealer-hero h1 {
@@ -1770,10 +1802,42 @@ body {
 
 /* Contact Page Styles */
 .contact-hero {
+    position: relative;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-    padding: 6rem 0 4rem;
+    overflow: hidden;
+}
+
+.contact-hero .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 1;
+}
+
+.contact-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+    z-index: 2;
+}
+
+.contact-hero-content {
+    position: relative;
+    z-index: 3;
     text-align: center;
+    color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem 0;
 }
 
 .contact-hero h1 {
