@@ -79,7 +79,7 @@ if (contactForm) {
         const data = Object.fromEntries(formData);
         
         // Basic validation
-        if (!data.name || !data.email || !data.phone || !data.subject || !data.message) {
+        if (!data.name || !data.email || !data.phone || !data.message) {
             alert('Please fill in all required fields.');
             return;
         }
