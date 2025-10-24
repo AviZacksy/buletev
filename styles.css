@@ -1576,6 +1576,30 @@ body {
     background: white;
 }
 
+/* General laptop optimizations */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+    
+    .contact-hero-content {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .form-container h2 {
+        font-size: 2.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .form-container p {
+        font-size: 1.15rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
 .form-container {
     max-width: 800px;
     margin: 0 auto;
@@ -1722,6 +1746,118 @@ body {
 .feature-item p {
     color: #666;
     line-height: 1.6;
+}
+
+/* Laptop Optimizations */
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .contact-hero {
+        padding: 5rem 0 3rem;
+    }
+    
+    .contact-hero h1 {
+        font-size: 3rem;
+    }
+    
+    .contact-hero p {
+        font-size: 1.1rem;
+        max-width: 500px;
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        max-width: 1200px;
+        margin: 2rem auto 0;
+    }
+    
+    .contact-card {
+        padding: 2.5rem 2rem;
+    }
+    
+    .contact-card h3 {
+        font-size: 1.4rem;
+    }
+    
+    .contact-card p {
+        font-size: 1rem;
+    }
+    
+    .form-container {
+        max-width: 900px;
+    }
+    
+    .contact-form {
+        padding: 3.5rem;
+    }
+    
+    .form-row {
+        gap: 2rem;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 14px 18px;
+        font-size: 1.05rem;
+    }
+    
+    .contact-form .btn {
+        padding: 18px 45px;
+        font-size: 1.15rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2.5rem;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .feature-item {
+        padding: 2.5rem 2rem;
+    }
+    
+    .feature-item h3 {
+        font-size: 1.4rem;
+    }
+    
+    .feature-item p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+}
+
+/* Tablet Optimizations */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .contact-hero {
+        padding: 4rem 0 3rem;
+    }
+    
+    .contact-hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+    
+    .contact-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .form-container {
+        max-width: 700px;
+    }
+    
+    .contact-form {
+        padding: 2.5rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
 }
 
 /* Responsive Design */
