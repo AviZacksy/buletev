@@ -563,12 +563,13 @@ body {
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    width: 90%;
+    width: 100%;
     justify-content: center;
     cursor: pointer;
     pointer-events: auto;
     position: relative;
     z-index: 10;
+    white-space: nowrap;
 }
 
 .about-link .btn:hover {
@@ -1585,6 +1586,8 @@ body {
     .about-link .btn {
         width: 100%;
         text-align: center;
+        white-space: nowrap;
+        font-size: 0.9rem;
     }
     
     .contact-content {
