@@ -546,7 +546,7 @@ body {
 }
 
 .about-link {
-    text-align: center;
+    text-align: left;
     margin-top: 3rem;
 }
 
@@ -562,6 +562,8 @@ body {
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    width: 70%;
+    justify-content: center;
 }
 
 .about-link .btn:hover {
@@ -1333,6 +1335,15 @@ body {
     
     .dealer-info h3 {
         font-size: 1.5rem;
+    }
+    
+    .about-link {
+        text-align: left;
+    }
+    
+    .about-link .btn {
+        width: 70%;
+        text-align: center;
     }
     
     .contact-content {
