@@ -2519,30 +2519,31 @@ body {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 8px;
-        border-radius: 6px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 8px;
+        border: 2px solid #333;
+        cursor: pointer;
     }
     
     .hamburger span {
-        background: #ffffff;
-        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        width: 28px;
+        background: #333;
+        width: 30px;
         height: 4px;
         margin: 4px 0;
         transition: all 0.3s ease;
+        border-radius: 2px;
     }
     
     .hamburger:hover {
-        background: rgba(0, 0, 0, 0.9);
+        background: rgba(0, 0, 0, 0.2);
         transform: scale(1.05);
+        border-color: #4ecdc4;
     }
     
     .hamburger:hover span {
         background: #4ecdc4;
-        box-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+        transform: scale(1.1);
     }
     
     .nav-menu {
