@@ -1614,6 +1614,160 @@ body {
     font-weight: 300;
 }
 
+/* Dealer Page Styles */
+.dealer-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6rem 0 4rem;
+    text-align: center;
+}
+
+.dealer-hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: slideUp 0.8s ease 0.2s forwards;
+}
+
+.dealer-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: slideUp 0.8s ease 0.4s forwards;
+}
+
+.dealer-application-section {
+    padding: 4rem 0;
+    background: #f8f9fa;
+}
+
+.dealer-form-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dealer-form-info {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+}
+
+.dealer-form-info h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.dealer-form-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.dealer-form-info li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #e9ecef;
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.dealer-form-info li:before {
+    content: "✓";
+    color: #667eea;
+    font-weight: bold;
+    margin-right: 0.5rem;
+}
+
+.dealer-form {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dealer-form h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.dealer-application .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.dealer-application .form-group {
+    text-align: left;
+}
+
+.dealer-application .form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.dealer-application .form-group input,
+.dealer-application .form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: white;
+    font-family: inherit;
+}
+
+.dealer-application .form-group input:focus,
+.dealer-application .form-group textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.dealer-application .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.dealer-application .btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.dealer-application .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
 /* Contact Page Styles */
 .contact-hero {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -2171,6 +2325,35 @@ body {
     .hero-badge {
         font-size: 0.8rem;
         padding: 10px 20px;
+    }
+    
+    /* Dealer Page Mobile Styles */
+    .dealer-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .dealer-hero p {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .dealer-form-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .dealer-form-info {
+        padding: 2rem 1.5rem;
+    }
+    
+    .dealer-form {
+        padding: 2rem 1.5rem;
+    }
+    
+    .dealer-application .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
     
     .about-stats {

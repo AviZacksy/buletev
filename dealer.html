@@ -42,48 +42,12 @@
         </div>
     </section>
 
-    <!-- Dealer Benefits Section -->
-    <section class="dealer-benefits-section">
-        <div class="container">
-            <div class="dealer-content-full">
-                <div class="dealer-text">
-                    <h2>Why Partner With Us?</h2>
-                    <p>BHARATH MOTOCORP offers exceptional opportunities for entrepreneurs to join our rapidly expanding electric vehicle network. With our proven track record and comprehensive support system, you can build a successful business in the growing EV market.</p>
-                    
-                    <div class="dealer-features">
-                        <div class="feature-card">
-                            <div class="feature-icon">🏆</div>
-                            <h3>Exclusive Territory</h3>
-                            <p>Get exclusive dealership rights in your designated area with protected market coverage</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">💰</div>
-                            <h3>Attractive Margins</h3>
-                            <p>Competitive profit margins and attractive incentives for maximum profitability</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">🛠️</div>
-                            <h3>Technical Support</h3>
-                            <p>Complete technical training and ongoing support for all your business needs</p>
-                        </div>
-                        <div class="feature-card">
-                            <div class="feature-icon">📈</div>
-                            <h3>Marketing Support</h3>
-                            <p>Marketing materials, promotional support, and brand recognition assistance</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Dealer Application Section -->
     <section class="dealer-application-section">
         <div class="container">
-            <h2>Apply for Dealership</h2>
             <div class="dealer-form-container">
                 <div class="dealer-form-info">
-                    <h3>Dealership Requirements</h3>
+                    <h2>Dealership Requirements</h2>
                     <ul>
                         <li>Minimum investment capacity of ₹5,00,000</li>
                         <li>Showroom space of minimum 1000 sq ft</li>
@@ -94,62 +58,61 @@
                 </div>
                 
                 <div class="dealer-form">
-                    <h3>Dealership Application Form</h3>
-                    <form class="dealer-application">
-                        <div class="form-group">
-                            <input type="text" name="name" placeholder="Full Name" required>
+                    <h2>Apply for Dealership</h2>
+                    <form class="dealer-application" id="dealerForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="email" name="email" placeholder="Email Address" required>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" name="city" required>
+                            </div>
                         </div>
-                        <div class="form-group">
-                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State *</label>
+                                <input type="text" id="state" name="state" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="business">Business Name</label>
+                                <input type="text" id="business" name="business">
+                            </div>
                         </div>
+                        
                         <div class="form-group">
-                            <input type="text" name="city" placeholder="City" required>
+                            <label for="experience">Previous Business Experience</label>
+                            <textarea id="experience" name="experience" rows="3" placeholder="Tell us about your previous business experience..."></textarea>
                         </div>
+                        
                         <div class="form-group">
-                            <input type="text" name="state" placeholder="State" required>
+                            <label for="investment">Investment Capacity</label>
+                            <textarea id="investment" name="investment" rows="2" placeholder="Please provide details about your investment capacity..."></textarea>
                         </div>
+                        
                         <div class="form-group">
-                            <input type="text" name="business" placeholder="Business Name (if any)">
+                            <label for="showroom">Showroom Details</label>
+                            <textarea id="showroom" name="showroom" rows="2" placeholder="Location and size of your showroom..."></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea name="experience" placeholder="Previous business experience" rows="3"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="investment" placeholder="Investment capacity and financial details" rows="2"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="showroom" placeholder="Showroom location and size details" rows="2"></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <span>Submit Application</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
                     </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Dealer Stats Section -->
-    <section class="dealer-stats">
-        <div class="container">
-            <h2>Our Dealer Network</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <h3>50+</h3>
-                    <p>Active Dealers</p>
-                </div>
-                <div class="stat-item">
-                    <h3>25+</h3>
-                    <p>States Covered</p>
-                </div>
-                <div class="stat-item">
-                    <h3>₹2Cr+</h3>
-                    <p>Dealer Revenue</p>
-                </div>
-                <div class="stat-item">
-                    <h3>95%</h3>
-                    <p>Satisfaction Rate</p>
                 </div>
             </div>
         </div>
