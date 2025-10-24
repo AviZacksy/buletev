@@ -2540,16 +2540,20 @@ body {
     
     .hero {
         min-height: 100vh;
-        padding: 2rem 0;
+        padding: 1rem 0;
         display: flex;
         align-items: center;
         justify-content: center;
+        position: relative;
     }
     
     .hero-content {
         text-align: center;
-        padding: 1rem;
-        margin-top: 2rem;
+        padding: 0.5rem;
+        width: 100%;
+        max-width: 100%;
+        position: relative;
+        z-index: 10;
     }
     
     .hero-title {
@@ -2559,14 +2563,23 @@ body {
     }
     
     .hero-stats {
+        display: flex;
         gap: 1rem;
         margin: 2rem 0;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
     }
     
     .stat-item {
-        padding: 1rem 1.5rem;
+        padding: 1rem;
+        margin: 0.5rem;
+        flex: 1;
+        min-width: 120px;
+        max-width: 150px;
+        text-align: center;
     }
     
     .stat-item h3 {
@@ -2582,17 +2595,23 @@ body {
     }
     
     .hero-buttons {
+        display: flex;
         justify-content: center;
-        flex-direction: column;
+        align-items: center;
+        flex-direction: row;
         gap: 1rem;
         margin-top: 2rem;
+        flex-wrap: wrap;
+        width: 100%;
     }
     
     .btn {
-        width: 100%;
-        max-width: 280px;
-        padding: 14px 24px;
+        flex: 1;
+        min-width: 140px;
+        max-width: 200px;
+        padding: 12px 20px;
         font-size: 0.9rem;
+        text-align: center;
     }
     
     .hero-subtitle {
@@ -2603,6 +2622,34 @@ body {
     .hero-description {
         font-size: 1rem;
         margin-bottom: 1.5rem;
+    }
+    
+    /* Extra small mobile screens */
+    @media (max-width: 480px) {
+        .hero-title {
+            font-size: 2.8rem;
+        }
+        
+        .hero-stats {
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        
+        .stat-item {
+            width: 100%;
+            max-width: 200px;
+            margin: 0.25rem 0;
+        }
+        
+        .hero-buttons {
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+        
+        .btn {
+            width: 100%;
+            max-width: 250px;
+        }
     }
     
     .about-content {
