@@ -42,31 +42,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Hero image carousel
-const heroImages = [
-    'images/1.jpg',
-    'images/2.jpg',
-    'images/3.jpg',
-    'images/4.jpg',
-    'images/5.jpg'
-];
-
-let currentImageIndex = 0;
+// Hero image - single static image
 const heroImg = document.getElementById('hero-img');
-
-function changeHeroImage() {
-    currentImageIndex = (currentImageIndex + 1) % heroImages.length;
-    heroImg.style.opacity = '0';
-    
-    setTimeout(() => {
-        heroImg.src = heroImages[currentImageIndex];
-        heroImg.style.opacity = '1';
-    }, 300);
-}
-
-// Change hero image every 5 seconds
 if (heroImg) {
-    setInterval(changeHeroImage, 5000);
+    heroImg.style.opacity = '1';
 }
 
 // Intersection Observer for animations
@@ -309,56 +288,6 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
-// Back to top button
-const backToTopBtn = document.createElement('button');
-backToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
-backToTopBtn.className = 'back-to-top';
-backToTopBtn.style.cssText = `
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    background: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(231, 76, 60, 0.3);
-`;
-
-document.body.appendChild(backToTopBtn);
-
-// Show/hide back to top button
-window.addEventListener('scroll', () => {
-    if (window.pageYOffset > 300) {
-        backToTopBtn.style.display = 'block';
-    } else {
-        backToTopBtn.style.display = 'none';
-    }
-});
-
-// Back to top functionality
-backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// Add hover effect to back to top button
-backToTopBtn.addEventListener('mouseenter', () => {
-    backToTopBtn.style.transform = 'scale(1.1)';
-    backToTopBtn.style.background = '#c0392b';
-});
-
-backToTopBtn.addEventListener('mouseleave', () => {
-    backToTopBtn.style.transform = 'scale(1)';
-    backToTopBtn.style.background = '#e74c3c';
-});
 
 // Preload images for better performance
 const imageUrls = [
