@@ -555,21 +555,21 @@ body {
     align-items: center;
     gap: 10px;
     padding: 15px 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #000000;
     color: white;
     text-decoration: none;
     border-radius: 25px;
     font-weight: 600;
     transition: all 0.3s ease;
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
-    width: 70%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
     justify-content: center;
 }
 
 .about-link .btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
-    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    background: #333333;
 }
 
 .about-link .btn i {
@@ -1342,7 +1342,7 @@ body {
     }
     
     .about-link .btn {
-        width: 70%;
+        width: 90%;
         text-align: center;
     }
     
