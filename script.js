@@ -69,48 +69,45 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Contact form handling
-const contactForm = document.querySelector('.contact-form');
+const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         // Get form data
         const formData = new FormData(this);
-        const name = this.querySelector('input[type="text"]').value;
-        const email = this.querySelector('input[type="email"]').value;
-        const phone = this.querySelector('input[type="tel"]').value;
-        const message = this.querySelector('textarea').value;
+        const data = Object.fromEntries(formData);
         
-        // Simple validation
-        if (!name || !email || !phone || !message) {
-            alert('Please fill in all fields.');
+        // Basic validation
+        if (!data.name || !data.email || !data.phone || !data.subject || !data.message) {
+            alert('Please fill in all required fields.');
             return;
         }
         
         // Email validation
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(email)) {
+        if (!emailRegex.test(data.email)) {
             alert('Please enter a valid email address.');
             return;
         }
         
         // Phone validation
-        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
-        if (!phoneRegex.test(phone.replace(/\s/g, ''))) {
-            alert('Please enter a valid phone number.');
+        const phoneRegex = /^[0-9]{10}$/;
+        if (!phoneRegex.test(data.phone)) {
+            alert('Please enter a valid 10-digit phone number.');
             return;
         }
         
         // Simulate form submission
         const submitBtn = this.querySelector('button[type="submit"]');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = 'Sending...';
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<span>Sending...</span>';
         submitBtn.disabled = true;
         
         setTimeout(() => {
-            alert('Thank you for your message! We will get back to you soon.');
+            alert('Thank you for your message! We will get back to you within 24 hours.');
             this.reset();
-            submitBtn.textContent = originalText;
+            submitBtn.innerHTML = originalText;
             submitBtn.disabled = false;
         }, 2000);
     });
