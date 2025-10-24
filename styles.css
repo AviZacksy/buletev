@@ -1617,7 +1617,7 @@ body {
 /* Dealer Page Styles */
 .dealer-hero {
     position: relative;
-    min-height: 80vh;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -2392,6 +2392,10 @@ body {
     }
     
     /* Dealer Page Mobile Styles */
+    .dealer-hero {
+        min-height: 50vh;
+    }
+    
     .dealer-hero h1 {
         font-size: 2.5rem;
     }
