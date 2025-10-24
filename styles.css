@@ -2020,6 +2020,33 @@ body {
     text-decoration: none;
 }
 
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.contact-number,
+.contact-email,
+.contact-address {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-hours,
+.contact-response,
+.contact-location {
+    font-size: 0.9rem;
+    color: #666;
+    font-style: italic;
+}
+
 .contact-form-section {
     padding: 4rem 0;
     background: white;
