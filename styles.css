@@ -446,13 +446,95 @@ body {
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-.product-card img {
+/* Product Image Carousel Styles */
+.product-image-carousel {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+    background: #f8f9fa;
+}
+
+.product-image {
     width: 100%;
     height: 250px;
     object-fit: contain;
     object-position: center;
-    background: #f8f9fa;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
     padding: 10px;
+}
+
+.product-image.active {
+    opacity: 1;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 2;
+}
+
+.carousel-btn {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+.product-image-carousel:hover .carousel-btn {
+    opacity: 1;
+}
+
+.carousel-btn:hover {
+    background: rgba(0, 0, 0, 0.8);
+    transform: scale(1.1);
+}
+
+.carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 2;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .product-info {
@@ -2721,12 +2803,24 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .product-card img {
+    .product-image-carousel {
         height: 200px;
-        object-fit: contain;
-        object-position: center;
-        background: #f8f9fa;
+    }
+    
+    .product-image {
+        height: 200px;
         padding: 15px;
+    }
+    
+    .carousel-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+    
+    .dot {
+        width: 8px;
+        height: 8px;
     }
     
     .gallery-grid {

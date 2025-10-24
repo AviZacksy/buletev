@@ -343,4 +343,69 @@ imageUrls.forEach(url => {
     img.src = url;
 });
 
+// Product Image Carousel Functions
+function changeProductImage(button, direction) {
+    const carousel = button.closest('.product-image-carousel');
+    const images = carousel.querySelectorAll('.product-image');
+    const dots = carousel.querySelectorAll('.dot');
+    const activeImage = carousel.querySelector('.product-image.active');
+    const activeDot = carousel.querySelector('.dot.active');
+    
+    let currentIndex = Array.from(images).indexOf(activeImage);
+    let nextIndex = currentIndex + direction;
+    
+    // Handle wrap-around
+    if (nextIndex >= images.length) {
+        nextIndex = 0;
+    } else if (nextIndex < 0) {
+        nextIndex = images.length - 1;
+    }
+    
+    const nextImage = images[nextIndex];
+    const nextDot = dots[nextIndex];
+    
+    showSlide(carousel, nextImage, nextDot);
+}
+
+function currentSlide(dot, slideNumber) {
+    const carousel = dot.closest('.product-image-carousel');
+    const images = carousel.querySelectorAll('.product-image');
+    const dots = carousel.querySelectorAll('.dot');
+    
+    const targetImage = images[slideNumber - 1];
+    const targetDot = dots[slideNumber - 1];
+    
+    showSlide(carousel, targetImage, targetDot);
+}
+
+function showSlide(carousel, image, dot) {
+    // Remove active class from all images and dots
+    carousel.querySelectorAll('.product-image').forEach(img => img.classList.remove('active'));
+    carousel.querySelectorAll('.dot').forEach(d => d.classList.remove('active'));
+    
+    // Add active class to current image and dot
+    image.classList.add('active');
+    dot.classList.add('active');
+}
+
+// Auto-advance carousels
+document.addEventListener('DOMContentLoaded', function() {
+    // Auto-advance carousels every 5 seconds
+    setInterval(function() {
+        const carousels = document.querySelectorAll('.product-image-carousel');
+        carousels.forEach(carousel => {
+            const activeImage = carousel.querySelector('.product-image.active');
+            const nextImage = activeImage.nextElementSibling;
+            if (nextImage && nextImage.classList.contains('product-image')) {
+                changeProductImage(carousel.querySelector('.carousel-btn.next'), 1);
+            } else {
+                // Go back to first image
+                const firstImage = carousel.querySelector('.product-image');
+                const firstDot = carousel.querySelector('.dot');
+                showSlide(carousel, firstImage, firstDot);
+            }
+        });
+    }, 5000);
+});
+
 console.log('Bulet EV Website loaded successfully!');
