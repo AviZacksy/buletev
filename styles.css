@@ -1,3 +1,33 @@
+/* Follow Us - minimal text links */
+.follow-us {
+    padding: 36px 0;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(15,17,21,0.04) 100%);
+}
+.follow-us h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+    color: #2c3e50;
+}
+.follow-us .links {
+    display: inline-flex;
+    gap: 0.75rem;
+}
+.follow-us .pill {
+    display: inline-block;
+    padding: 10px 16px;
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 999px;
+    color: #667eea;
+    text-decoration: none;
+    background: #fff;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+.follow-us .pill:hover {
+    background: #667eea;
+    color: #fff;
+    border-color: #667eea;
+}
 /* About page responsive adjustments */
 .about-main {
     margin-top: 110px; /* hero removed: avoid navbar overlap */
@@ -2737,16 +2767,20 @@ body {
     .nav-menu {
         position: fixed;
         left: -100%;
+        right: auto;
         top: 70px;
         flex-direction: column;
         background: rgba(0, 0, 0, 0.95);
         backdrop-filter: blur(15px);
         width: 100%;
+        height: auto;
         text-align: center;
-        transition: 0.3s;
+        transition: left 0.3s ease;
         box-shadow: 0 10px 27px rgba(0,0,0,0.3);
         padding: 2rem 0;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        gap: 0.25rem;
+        z-index: 2000;
     }
     
     .nav-menu.active {
@@ -2758,7 +2792,14 @@ body {
         font-size: 1.1rem;
         padding: 1rem 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: block;
     }
+    .nav-menu li { list-style: none; }
+    /* Mobile-only Follow Us inside menu */
+    .mobile-follow { display: none; }
+
+    /* Hide homepage Follow Us on mobile as requested */
+    .follow-us { display: none; }
     
     .nav-menu a:hover {
         color: #4ecdc4 !important;
@@ -3208,6 +3249,11 @@ body {
         min-height: 180px;
         max-height: 300px;
     }
+}
+
+/* Lock scroll when mobile menu open */
+body.menu-open {
+    overflow: hidden;
 }
 
 /* Tight mobile screens (e.g., 483px width) */
