@@ -1,3 +1,25 @@
+/* About page responsive adjustments */
+.about-main {
+    margin-top: 110px; /* hero removed: avoid navbar overlap */
+}
+
+.about-content {
+    padding: 0 1rem;
+}
+
+.about-text h2 {
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+}
+
+.about-text p {
+    font-size: clamp(1rem, 3.5vw, 1.1rem);
+}
+
+@media (max-width: 768px) {
+    .about-main { margin-top: 90px; }
+    .about-highlights { gap: 1.25rem; }
+    .highlight-item { padding: 1.25rem; }
+}
 .contact-actions {
     margin-top: 110px; /* prevent overlap with fixed navbar on contact page */
 }
@@ -1571,9 +1593,9 @@ body {
 
 /* Footer */
 .footer {
-    background: #f8f9fa;
-    color: #2c3e50;
-    padding: 40px 0 20px;
+    background: #0f1115; /* subtle dark */
+    color: #e8e8e8;
+    padding: 36px 0 18px;
     position: relative;
     overflow: hidden;
 }
@@ -1592,7 +1614,7 @@ body {
 .footer-section h3,
 .footer-section h4 {
     margin-bottom: 1rem;
-    color: #667eea;
+    color: #ffd700; /* minimal brand accent */
 }
 
 .footer-logo {
@@ -1612,7 +1634,7 @@ body {
 }
 
 .footer-section p {
-    color: #555;
+    color: rgba(255, 255, 255, 0.8);
     line-height: 1.6;
     margin-bottom: 0.5rem;
 }
@@ -1626,13 +1648,13 @@ body {
 }
 
 .footer-section ul li a {
-    color: #555;
+    color: rgba(255, 255, 255, 0.75);
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.2s ease;
 }
 
 .footer-section ul li a:hover {
-    color: #667eea;
+    color: #ffd700;
 }
 
 .social-links {
@@ -1644,26 +1666,26 @@ body {
     display: inline-block;
     width: 40px;
     height: 40px;
-    background: #ffffff;
-    color: #667eea;
+    background: transparent;
+    color: rgba(255,255,255,0.85);
     text-align: center;
     line-height: 40px;
     border-radius: 50%;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0,0,0,0.08);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
 .social-links a:hover {
-    background: #667eea;
-    color: #ffffff;
+    background: #ffd700;
+    color: #0f1115;
+    border-color: #ffd700;
 }
 
 .footer-bottom {
     text-align: center;
-    padding-top: 1.5rem;
-    border-top: 1px solid rgba(0, 0, 0, 0.08);
-    color: #666;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.8);
     position: relative;
     z-index: 2;
 }
