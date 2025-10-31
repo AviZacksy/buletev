@@ -3198,6 +3198,65 @@ body {
     }
 }
 
+/* Very small phones (e.g., Moto G34, ≤420px) */
+@media (max-width: 420px) {
+    .hero {
+        margin-top: 75px;
+        padding: 1.2rem 0;
+    }
+    .hero-image img {
+        max-height: 220px;
+    }
+    .hero-content {
+        padding: 0 0.75rem;
+    }
+    .hero-title {
+        font-size: 1.25rem;
+        line-height: 1.35;
+        margin-bottom: 0.8rem;
+        padding: 0;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    .hero-subtitle {
+        font-size: 0.88rem;
+        line-height: 1.35;
+        margin-bottom: 1.2rem;
+        padding: 0;
+        white-space: normal;
+        word-wrap: break-word;
+    }
+    .hero-buttons {
+        gap: 0.6rem;
+    }
+    .btn {
+        width: 100%;
+        max-width: 240px;
+        padding: 11px 16px;
+    }
+}
+
+/* Ultra-small phones (≤380px) */
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 1.15rem;
+        line-height: 1.3;
+    }
+    .hero-subtitle {
+        font-size: 0.85rem;
+        line-height: 1.35;
+    }
+    .features h2,
+    .products h2 {
+        font-size: 1.4rem;
+    }
+    .btn {
+        max-width: 220px;
+        padding: 10px 14px;
+        font-size: 0.85rem;
+    }
+}
+
 /* Focused fix for 480px–500px widths */
 @media (max-width: 500px) and (min-width: 480px) {
     .hero {
